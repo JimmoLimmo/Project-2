@@ -57,7 +57,7 @@ categories = {
     ]
 }
 
-# --- IMAGE DOWNLOAD SETTINGS ---
+# Download Settings
 for class_name, search_terms in categories.items():
     output_dir = f"dataset_raw/{class_name}"
     os.makedirs(output_dir, exist_ok=True)
@@ -65,7 +65,7 @@ for class_name, search_terms in categories.items():
     print(f"\nDownloading images for '{class_name}'")
 
     for term in search_terms:
-        print(f" → Searching '{term}' ...")
+        print(f" Searching '{term}' ...")
         params = {
             'q': term,
             'num': 50,  
