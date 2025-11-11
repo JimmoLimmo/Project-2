@@ -13,13 +13,13 @@ if not API_KEY or not CX_ID:
 gis = GoogleImagesSearch(API_KEY, CX_ID)
 # Classes
 categories = {
-    "dalek": [
-        "dalek doctor who",
-        "dalek toy",
-        "dalek prop",
-        "gold dalek",
-        "black dalek"
-    ],
+    # "dalek": [
+    #     "dalek doctor who",
+    #     # "dalek toy",
+    #     # "dalek prop",
+    #     # "gold dalek",
+    #     # "black dalek"
+    # ],
     "lightsaber": [
         "lightsaber",
         "blue lightsaber",
@@ -68,7 +68,7 @@ for class_name, search_terms in categories.items():
         print(f" Searching '{term}' ...")
         params = {
             'q': term,
-            'num': 50,  
+            'num': 10,  
             'fileType': 'jpg|png',
             'safe': 'off',
             'imgType': 'photo'
