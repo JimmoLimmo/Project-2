@@ -20,20 +20,20 @@ categories = {
     #     # "gold dalek",
     #     # "black dalek"
     # ],
-    "lightsaber": [
-        "lightsaber",
-        "blue lightsaber",
-        "green lightsaber",
-        "star wars lightsaber",
-        "lightsaber duel"
-    ],
-    "sith_lightsaber": [
-        "sith lightsaber",
-        "red lightsaber",
-        "double bladed lightsaber",
-        "dark side lightsaber",
-        "darth maul lightsaber"
-    ],
+    # "lightsaber": [
+    #     "lightsaber",
+    #     "blue lightsaber",
+    #     "green lightsaber",
+    #     "star wars lightsaber",
+    #     "lightsaber duel"
+    # ],
+    # "sith_lightsaber": [
+    #     "sith lightsaber",
+    #     "red lightsaber",
+    #     "double bladed lightsaber",
+    #     "dark side lightsaber",
+    #     "darth maul lightsaber"
+    # ],
     "cat": [
         "cat close-up",
         "kitten",
@@ -77,6 +77,6 @@ for class_name, search_terms in categories.items():
         try:
             gis.search(search_params=params, path_to_dir=output_dir)
         except Exception as e:
-            print(f" ⚠️ Skipped '{term}' due to error: {e}")
+            print(f"Skipped '{term}' due to error: {e}")
 
 print("\n Image scraping complete! All images saved in 'dataset_raw/'")
