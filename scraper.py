@@ -20,41 +20,41 @@ categories = {
     #     # "gold dalek",
     #     # "black dalek"
     # ],
-    # "lightsaber": [
-    #     "lightsaber",
-    #     "blue lightsaber",
-    #     "green lightsaber",
-    #     "star wars lightsaber",
-    #     "lightsaber duel"
-    # ],
-    # "sith_lightsaber": [
-    #     "sith lightsaber",
-    #     "red lightsaber",
-    #     "double bladed lightsaber",
-    #     "dark side lightsaber",
-    #     "darth maul lightsaber"
-    # ],
-    "cat": [
-        "cat close-up",
-        "kitten",
-        "cat outdoors",
-        "tabby cat",
-        "cat sitting"
+    "lightsaber": [
+        "lightsaber",
+        "blue lightsaber",
+        "green lightsaber",
+        "star wars lightsaber",
+        "lightsaber duel"
     ],
-    "dog": [
-        "dog close-up",
-        "puppy",
-        "dog running",
-        "dog outdoors",
-        "dog portrait"
+    "sith_lightsaber": [
+        "sith lightsaber",
+        "red lightsaber",
+        "double bladed lightsaber",
+        "dark side lightsaber",
+        "darth maul lightsaber"
     ],
-    "person": [
-        "person portrait",
-        "people walking",
-        "person standing",
-        "man woman walking",
-        "human face"
-    ]
+    # "cat": [
+    #     "cat close-up",
+    #     "kitten",
+    #     "cat outdoors",
+    #     "tabby cat",
+    #     "cat sitting"
+    # ],
+    # "dog": [
+    #     "dog close-up",
+    #     "puppy",
+    #     "dog running",
+    #     "dog outdoors",
+    #     "dog portrait"
+    # ],
+    # "person": [
+    #     "person portrait",
+    #     "people walking",
+    #     "person standing",
+    #     "man woman walking",
+    #     "human face"
+    # ]
 }
 
 # Download Settings
