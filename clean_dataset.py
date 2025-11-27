@@ -30,7 +30,7 @@ def collect_all_images(root):
 
 
 def clean_dataset():
-    print("\n Starting FULL dataset cleanup...")
+    print("\n Starting dataset cleanup...")
     global_hashes = set()
     removed = 0
 

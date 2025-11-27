@@ -2,18 +2,43 @@
 ultralytics>=8.0.100
 torch>=2.0.0
 torchvision>=0.15.0
+torchvision>=0.15.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Image handling and preprocessing
+pillow>=9.5.0
+opencv-python>=4.8.0
+pillow>=9.5.0
+opencv-python>=4.8.0
 
 # Image handling and preprocessing
 pillow>=9.5.0
 opencv-python>=4.8.0
 
-# Optional but recommended utilities
-numpy>=1.24.0
-matplotlib>=3.7.0
-tqdm>=4.65.0  # for progress bars if you add them later
-
-# Environment management
+# Dataset download / integration
+roboflow>=1.1.26
 python-dotenv>=1.0.0
 
-# For Roboflow integration (if you download/export datasets programmatically)
+# Scraping / image utilities
+numpy>=1.24.0
+matplotlib>=3.7.0
+tqdm>=4.65.0
+tqdm>=4.65.0
+requests>=2.30.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+tqdm>=4.65.0
+
+# Environment / configuration
+python-dotenv>=1.0.0
 roboflow>=1.1.26
+
+# Scraping / custom image search
+google-images-search>=1.4.6  # PyPI package name version format
+
+# Optional but strongly recommended utilities
+tqdm>=4.65.0
+requests>=2.30.0
+imagehash>=4.3.1
+typing-extensions>=4.8.0

@@ -9,7 +9,7 @@ VALID_EXTENSIONS = (".jpg", ".jpeg", ".png", ".pjpeg")
 os.makedirs(OUT_DIR, exist_ok=True)
 
 def resize_all():
-    print("Resizing images...")
+    print("Resizing images and preserving timestamp folders...")
 
     for root, dirs, files in os.walk(RAW_DIR):
         for file in files:
@@ -18,19 +18,31 @@ def resize_all():
             
             src_path = os.path.join(root, file)
 
-            # Determine class name (first folder under dataset_raw)
+            # Get relative path
             rel_path = os.path.relpath(root, RAW_DIR)
-            class_name = rel_path.split(os.sep)[0]
+            parts = rel_path.split(os.sep)
 
-            class_out_dir = os.path.join(OUT_DIR, class_name)
+            # Determine class and timestamp
+            class_name = parts[0] if len(parts) > 0 else None
+            timestamp = parts[1] if len(parts) > 1 else None
+
+            if class_name is None:
+                continue
+
+            # Output directory preserves timestamp folder
+            if timestamp:
+                class_out_dir = os.path.join(OUT_DIR, class_name, timestamp)
+            else:
+                class_out_dir = os.path.join(OUT_DIR, class_name)
+
             os.makedirs(class_out_dir, exist_ok=True)
 
             # Normalize extension to .jpg
             base_name = os.path.splitext(file)[0]
             out_name = base_name + ".jpg"
-
-            # Prevent collisions if same filename exists in multiple timestamp folders
             out_path = os.path.join(class_out_dir, out_name)
+
+            # Prevent collisions
             counter = 1
             while os.path.exists(out_path):
                 out_name = f"{base_name}_{counter}.jpg"
@@ -44,7 +56,7 @@ def resize_all():
             except Exception as e:
                 print(f"Skipping {src_path}: {e}")
 
-    print("\n Resize complete! Files saved to:", OUT_DIR)
+    print("\nResize complete! Files saved to:", OUT_DIR)
 
 
 if __name__ == "__main__":

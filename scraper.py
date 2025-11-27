@@ -23,20 +23,20 @@ categories = {
     #     # "gold dalek",
     #     # "black dalek"
     # ],
-    "lightsaber": [
-        "lightsaber",
-        "blue lightsaber",
-        "green lightsaber",
-        "star wars lightsaber",
-        "lightsaber duel"
-    ],
-    "sith_lightsaber": [
-        "sith lightsaber",
-        "red lightsaber",
-        "double bladed lightsaber",
-        "dark side lightsaber",
-        "darth maul lightsaber"
-    ],
+    # "lightsaber": [
+    #     "lightsaber",
+    #     "blue lightsaber",
+    #     "green lightsaber",
+    #     "star wars lightsaber",
+    #     "lightsaber duel"
+    # ],
+    # "sith_lightsaber": [
+    #     "sith lightsaber",
+    #     "red lightsaber",
+    #     "double bladed lightsaber",
+    #     "dark side lightsaber",
+    #     "darth maul lightsaber"
+    # ],
     # "cat": [
     #     "cat close-up",
     #     "kitten",
@@ -44,20 +44,20 @@ categories = {
     #     "tabby cat",
     #     "cat sitting"
     # ],
-    # "dog": [
-    #     "dog close-up",
-    #     "puppy",
-    #     "dog running",
-    #     "dog outdoors",
-    #     "dog portrait"
-    # ],
-    # "person": [
-    #     "person portrait",
-    #     "people walking",
-    #     "person standing",
-    #     "man woman walking",
-    #     "human face"
-    # ]
+    "dog": [
+        "dog close-up",
+        "puppy",
+        "dog running",
+        "dog outdoors",
+        "dog portrait"
+    ],
+    "person": [
+        "person portrait",
+        "people walking",
+        "person standing",
+        "man woman walking",
+        "human face"
+    ]
 }
 
 # Create a unique run folder
@@ -98,7 +98,7 @@ for class_name, search_terms in categories.items():
     output_dir = f"dataset_raw/{class_name}/{RUN_NAME}"
     os.makedirs(output_dir, exist_ok=True)
 
-    print(f"\n🔵 Downloading images for category '{class_name}'")
+    print(f"\n Downloading images for category '{class_name}'")
 
     for term in search_terms:
         print(f" → Searching '{term}' ...")
