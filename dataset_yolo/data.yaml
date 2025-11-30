@@ -2,12 +2,12 @@ train: ../train/images
 val: ../valid/images
 test: ../test/images
 
-nc: 4
-names: ['cat', 'dalek', 'dog', 'person']
+nc: 6
+names: ['cat', 'dalek', 'dog', 'lightsaber', 'person', 'sith_lightsaber']
 
 roboflow:
   workspace: software-engineering-project-2
   project: project-2-cgbsy
-  version: 1
+  version: 2
   license: CC BY 4.0
-  url: https://universe.roboflow.com/software-engineering-project-2/project-2-cgbsy/dataset/1
+  url: https://universe.roboflow.com/software-engineering-project-2/project-2-cgbsy/dataset/2

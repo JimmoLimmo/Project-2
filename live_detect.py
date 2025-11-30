@@ -19,7 +19,7 @@ def run_realtime(camera_index=0):
         if not ret:
             break
 
-        # Run detection (can lower imgsz for speed if needed)
+        # Run detection (can lower imgs for speed if needed)
         results = model(frame, imgsz=416, conf=0.5, verbose=False)
         result = results[0]
 

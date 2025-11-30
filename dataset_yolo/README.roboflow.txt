@@ -1,8 +1,8 @@
 
-Project 2 - v1 v1_yolo_ready_daleksOnly
+Project 2 - v2 2025-11-30 1:29am
 ==============================
 
-This dataset was exported via roboflow.com on November 11, 2025 at 8:37 PM GMT
+This dataset was exported via roboflow.com on November 30, 2025 at 7:30 AM GMT
 
 Roboflow is an end-to-end computer vision platform that helps you
 * collaborate with your team on computer vision projects
@@ -17,7 +17,7 @@ visit https://github.com/roboflow/notebooks
 
 To find over 100k other datasets and pre-trained models, visit https://universe.roboflow.com
 
-The dataset includes 836 images.
+The dataset includes 1899 images.
 Objects are annotated in YOLOv8 format.
 
 The following pre-processing was applied to each image:
@@ -26,6 +26,10 @@ The following pre-processing was applied to each image:
 
 The following augmentation was applied to create 3 versions of each source image:
 * 50% probability of horizontal flip
+* Random rotation of between -12 and +12 degrees
+* Random shear of between -10° to +10° horizontally and -10° to +10° vertically
 * Random brigthness adjustment of between -15 and +15 percent
+* Random Gaussian blur of between 0 and 2.5 pixels
+* Salt and pepper noise was applied to 1.49 percent of pixels
 
 
