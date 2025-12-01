@@ -1,2 +1,10 @@
 /venv
 /dataset_yolo
+.env
+
+# Python env
+venv/
+.venv/
+ENV/
+
+dataset_yolo/
