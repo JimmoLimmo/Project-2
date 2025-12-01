@@ -1,7 +1,7 @@
 import cv2
 from ultralytics import YOLO
 
-MODEL_PATH = "runs/detect/train9/weights/best.pt"
+MODEL_PATH = 'C:/Users/markh/Downloads/runs/detect/4080_run2/weights/best.pt'
 
 def run_realtime(camera_index=0):
     # Load model
