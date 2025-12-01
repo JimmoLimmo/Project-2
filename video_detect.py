@@ -5,7 +5,7 @@ import cv2
 from ultralytics import YOLO
 
 #path to model
-MODEL_PATH = "runs/detect/train9/weights/best.pt"
+MODEL_PATH = "runs/detect/train7/weights/best.pt"
 
 def annotate_video(input_path, output_path):
     #load model
