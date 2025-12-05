@@ -60,28 +60,24 @@ Training output will be saved in:
 runs/detect/<Name>/
 ```
 This includes:
-best.pt — best performing weights
+- best.pt — best performing weights
+- last.pt — final epoch weights
+- results.png — training curves
+- confusion_matrix.png
 
-last.pt — final epoch weights
-
-results.png — training curves
-
-confusion_matrix.png
-
-Validating the Model
-Validation on validation set
+## Validating the Model
+# Validation on validation set
+```bash
 yolo detect val model=runs/detect/final_model/weights/best.pt data=dataset_yolo/data.yaml
+```
 
-Validation on test set
+# Validation on test set
+```bash
 yolo detect val model=runs/detect/final_model/weights/best.pt data=dataset_yolo/data.yaml split=test
-
+```
 
 YOLO generates:
-
-Precision/Recall curves
-
-mAP metrics
-
-Confusion matrix
-
-Validation stats under runs/detect/val*/
+- Precision/Recall curves
+- mAP metrics
+- Confusion matrix
+- Validation stats under runs/detect/val*/
