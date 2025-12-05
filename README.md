@@ -1,4 +1,4 @@
-# Project 2
+## Project 2
 
 This project implements a deep-learning object detection system using **Ultralytics YOLOv8**.
 
@@ -27,48 +27,39 @@ Install dependencies:
 
 ```bash
 pip install -r requirements.txt
-
-Usage Instructions
-Video Detection
-
+```
+## Usage Instructions
+# Video Detection
 Run object detection on any video:
-
+```bash
 python video_detect.py input_video.mp4 output_video.mp4
-
-
+```
 The output video will contain bounding boxes and labels.
 
-Live Webcam Detection
-
+# Live Webcam Detection
 Requires a webcam or OBS Virtual Camera:
-
+```bash
 python live_detect.py
-
-
+```
 Press Q to exit the script.
 
 Note: Update the model path inside the script if you retrain the model.
 
-Dataset Location (for Retraining)
-
+### Dataset Location (for Retraining)
 The dataset is stored in:
-
+```bash
 dataset_yolo/
-
-Retraining the Model
-
+```
+### Retraining the Model
 To retrain YOLOv8:
-
+```bash
 yolo detect train model=yolov8n.pt data=dataset_yolo/data.yaml epochs=100 imgsz=640 batch=16 name=<Name>
-
-
+```
 Training output will be saved in:
-
+```bash
 runs/detect/<Name>/
-
-
+```
 This includes:
-
 best.pt — best performing weights
 
 last.pt — final epoch weights
