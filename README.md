@@ -55,10 +55,12 @@ The dataset is stored in:
 ```bash
 dataset_yolo/
 ```
+Be sure the dataset you use is in YoloV8 format
+
 # Retraining the Model
 To retrain YOLOv8:
 ```bash
-yolo detect train model=yolov8n.pt data=dataset_yolo/data.yaml epochs=100 imgsz=640 batch=16 name=<Name>
+yolo detect train model=yolov8n.pt data=dataset_yolo/data.yaml epochs=100 imgsz=640 batch=16 name=<model_name>
 ```
 Training output will be saved in:
 ```bash
@@ -76,12 +78,12 @@ This includes:
 
 ## Validation on validation set
 ```bash
-yolo detect val model=runs/detect/final_model/weights/best.pt data=dataset_yolo/data.yaml
+yolo detect val model=runs/detect/<model_name>/weights/best.pt data=dataset_yolo/data.yaml
 ```
 
 ## Validation on test set
 ```bash
-yolo detect val model=runs/detect/final_model/weights/best.pt data=dataset_yolo/data.yaml split=test
+yolo detect val model=runs/detect/<model_name>/weights/best.pt data=dataset_yolo/data.yaml split=test
 ```
 
 YOLO generates:

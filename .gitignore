@@ -25,3 +25,9 @@ venv/
 *.html
 .env
 .clang-format
+
+# Ignore all YOLO runs except final
+runs/
+!runs/detect/
+runs/detect/*
+!runs/detect/final/
