@@ -1,5 +1,0 @@
-BasedOnStyle: Google
-DerivePointerAlignment: false
-BreakBeforeBraces: Attach
-IndentWidth: 4
-ColumnLimit: 0

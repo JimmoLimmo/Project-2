@@ -7,4 +7,21 @@ venv/
 .venv/
 ENV/
 
-dataset_yolo/
+# dataset_yolo/
+
+
+dataset_raw/
+dataset_resized/
+dataset_yolo_old/
+dataset_yolo_Demo/
+dataset_yolo_Rebalancing/
+runs/detect/4080_run/
+runs/detect/4080_run4/
+output*.mp4
+temp_no_audio.mp4
+test.mp4
+Test2.mp4
+venv/
+*.html
+.env
+.clang-format
