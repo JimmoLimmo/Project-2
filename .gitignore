@@ -31,3 +31,6 @@ runs/
 !runs/detect/
 runs/detect/*
 !runs/detect/final/
+
+
+cam_test.py
