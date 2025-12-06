@@ -26,7 +26,7 @@ jobs:
 
       - name: Unzip dataset
         run: |
-          unzip dataset_yolo.zip -d .
+          unzip yolo_model.zip -d .
 
       - name: Run YOLO Detect on Tests
         run: |
