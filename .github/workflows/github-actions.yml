@@ -24,6 +24,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Unzip dataset
+        run: |
+          unzip dataset_yolo.zip -d .
+
       - name: Run YOLO Detect on Tests
         run: |
           for model_dir in runs/detect/*; do
