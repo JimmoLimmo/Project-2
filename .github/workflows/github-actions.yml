@@ -35,6 +35,6 @@ jobs:
           for model_dir in runs/detect/*; do
             if [ -d "$model_dir" ]; then
               echo "Validating Model in $model_dir"
-              yolo detect val model="$model_dir/weights/best.pt" data=dataset_yolo/data.yaml split=test
+              yolo detect val model="$model_dir/weights/best.pt" data=yolo_model/data.yaml split=test
             fi
           done
