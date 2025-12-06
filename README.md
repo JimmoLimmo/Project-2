@@ -97,8 +97,7 @@ GitHub actions has been setup to automatically run validations on the test set. 
 
 If you want to run a test without pushing, you can click into `YOLO Model Validation` on the left sidebar and press `Run workflow`.
 
-NOTE: There are issues ocassionally when running due to space limitations that can pop up when running.
-
+NOTE: There are issues ocassionally when installing requirements due to space limitations. Attempt to re-run the workflow if an error occurs.
 ---
 
 # Dataset Preparation & Utilities
