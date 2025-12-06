@@ -91,3 +91,97 @@ YOLO generates:
 - mAP metrics
 - Confusion matrix
 - Validation stats under runs/detect/val*/
+
+---
+
+# Dataset Preparation & Utilities
+You can prepare your dataset anyway you want. I created image scraping and processing scripts if you'd like to use them. You can edit the categories to fit the needs of your model.
+
+Here is what is required if you'd like to use my scripts.
+
+## Create a .env file for Google Images API (REQUIRED FOR SCRAPING)
+Inside the root folder:
+```bash
+GOOGLE_API_KEY=YOUR_API_KEY_HERE
+GOOGLE_CX_ID=YOUR_CX_ID_HERE
+```
+This is required for image_scraper.py to work.
+
+## Create a Google Cloud Project
+1. Go to: https://console.cloud.google.com/
+2. Sign in with your Google account.
+3. Click Select Project → New Project
+4. Name it anything (e.g., YOLO-Scraper).
+
+## Enable the Custom Search API
+1. Open the API Library: https://console.cloud.google.com/apis/library
+2. Search for Custom Search API
+3. Click Enable
+
+## Create an API Key
+1. Go to Credentials: https://console.cloud.google.com/apis/credentials
+2. Click Create Credentials → API Key
+3. Copy the generated key — this is your:
+```bash
+GOOGLE_API_KEY=your_key_here
+```
+Note that Google has a limit for the free tier. 
+
+## Creaete a Custom Search Engine (CSE)
+1. Go to the CSE dashboard: https://cse.google.com/cse/all
+2. Click Add
+3. For "Sites to search", enter: 
+```bash
+www.google.com
+```
+4. Click Create
+
+From here you can change your search engine settings
+
+## Enable Image Search for your CSE
+1. Open your CSE 
+2. Go to Setup 
+3. Go to Basics
+4. Toggle Image Search
+5. Save
+
+## Get Your CX ID
+While still in your CSE settings:
+1. Go to Setup
+2. Under Details, you'll see something like: 
+```bash
+Search engine ID: 1234567890abcdef:xyz123abc
+```
+This goes in your 
+```bash
+GOOGLE_CX_ID=your_cx_here
+```
+---
+If everything works your images will be downloaded into 
+```bash
+dataset_raw/<class>/<timestamp>/
+```
+## Recommended Workflow
+
+### **Step 1 — Scrape images**  
+```bash
+python scripts/image_scraper.py
+```
+
+### **Step 2 - Clean Dataset**
+```bash
+python scripts/dataset_cleaner.py
+```
+
+### **Step 3 - Resize Images**
+```bash
+python scripts/dataset_resizer.py
+```
+
+
+### **Step 4 - Normalize Filename Length**
+```bash
+python scripts/filename_shortener.py
+```
+
+### **Step 5 - Import Images to Roboflow and Start Labeling!** 

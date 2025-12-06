@@ -10,8 +10,7 @@ ENV/
 # dataset_yolo/
 
 
-dataset_raw/
-dataset_resized/
+
 dataset_yolo_old/
 dataset_yolo_Demo/
 dataset_yolo_Rebalancing/
@@ -27,10 +26,16 @@ venv/
 .clang-format
 
 # Ignore all YOLO runs except final
-runs/
-!runs/detect/
-runs/detect/*
-!runs/detect/final/
+# runs/
+# !runs/detect/
+# runs/detect/*
+# !runs/detect/final/
 
 
 cam_test.py
+
+final_model
+final2
+predict*
+train*
+val*

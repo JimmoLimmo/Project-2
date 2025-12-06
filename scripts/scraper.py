@@ -8,7 +8,7 @@ Features:
 - Avoids duplicates via perceptual hashing (imagehash)
 - Organizes downloads in dataset_raw/<class>/<timestamp>/ folders
 
-Environment variables required (in a .env file at project root):
+Environment variables required (a .env file must be created at project root):
     GOOGLE_API_KEY
     GOOGLE_CX_ID
 """
