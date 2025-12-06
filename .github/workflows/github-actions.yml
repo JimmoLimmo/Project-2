@@ -1,0 +1,34 @@
+name: YOLO Model Validation
+run-name: Running Tests on change from ${{ github.actor }}
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  Test-Set-Metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run YOLO Detect on Tests
+        run: |
+          for model_dir in runs/detect/*; do
+            if [ -d "$model_dir" ]; then
+              echo "Validating Model in $model_dir"
+              yolo detect val model="$model_dir/weights/best.pt" data=dataset_yolo/data.yaml split=test
+            fi
+          done
