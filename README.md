@@ -92,6 +92,13 @@ YOLO generates:
 - Confusion matrix
 - Validation stats under runs/detect/val*/
 
+## Auto Validation with GitHub Actions
+GitHub actions has been setup to automatically run validations on the test set. You can view the output of the validation by going to the GitHub repository. Click on the `Action` tab and find the test from your commit.
+
+If you want to run a test without pushing, you can click into `YOLO Model Validation` on the left sidebar and press `Run workflow`.
+
+NOTE: There are issues ocassionally when running due to space limitations that can pop up when running.
+
 ---
 
 # Dataset Preparation & Utilities
