@@ -99,7 +99,7 @@ You can prepare your dataset anyway you want. I created image scraping and proce
 
 Here is what is required if you'd like to use my scripts.
 
-## Create a .env file for Google Images API (REQUIRED FOR SCRAPING)
+### Create a .env file for Google Images API (REQUIRED FOR SCRAPING)
 Inside the root folder:
 ```bash
 GOOGLE_API_KEY=YOUR_API_KEY_HERE
@@ -107,18 +107,18 @@ GOOGLE_CX_ID=YOUR_CX_ID_HERE
 ```
 This is required for image_scraper.py to work.
 
-## Create a Google Cloud Project
+### Create a Google Cloud Project
 1. Go to: https://console.cloud.google.com/
 2. Sign in with your Google account.
 3. Click Select Project → New Project
 4. Name it anything (e.g., YOLO-Scraper).
 
-## Enable the Custom Search API
+### Enable the Custom Search API
 1. Open the API Library: https://console.cloud.google.com/apis/library
 2. Search for Custom Search API
 3. Click Enable
 
-## Create an API Key
+### Create an API Key
 1. Go to Credentials: https://console.cloud.google.com/apis/credentials
 2. Click Create Credentials → API Key
 3. Copy the generated key — this is your:
@@ -127,7 +127,7 @@ GOOGLE_API_KEY=your_key_here
 ```
 Note that Google has a limit for the free tier. 
 
-## Creaete a Custom Search Engine (CSE)
+### Create a Custom Search Engine (CSE)
 1. Go to the CSE dashboard: https://cse.google.com/cse/all
 2. Click Add
 3. For "Sites to search", enter: 
@@ -138,14 +138,14 @@ www.google.com
 
 From here you can change your search engine settings
 
-## Enable Image Search for your CSE
+### Enable Image Search for your CSE
 1. Open your CSE 
 2. Go to Setup 
 3. Go to Basics
 4. Toggle Image Search
 5. Save
 
-## Get Your CX ID
+### Get Your CX ID
 While still in your CSE settings:
 1. Go to Setup
 2. Under Details, you'll see something like: 
